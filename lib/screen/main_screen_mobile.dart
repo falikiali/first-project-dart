@@ -122,7 +122,15 @@ class _MainScreenMobileState extends State<MainScreenMobile> {
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8.0),
-                          color: Colors.grey
+                          gradient: const LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            stops: [0.3, 1],
+                            colors: [
+                              Color.fromARGB(255, 0, 0, 0),
+                              Color.fromARGB(136, 0, 0, 0),
+                            ]
+                          )
                         ),
                         child: Center(
                           child: Text(
