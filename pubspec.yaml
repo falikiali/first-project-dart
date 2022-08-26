@@ -68,6 +68,22 @@ flutter:
     - images/iklan2.jpg
     - images/iklan3.jpg
     - lotties/contact.json
+    - images/kacamata1_1.jpg
+    - images/kacamata1_2.jpg
+    - images/kacamata1_3.jpg
+    - images/kacamata1_4.jpg
+    - images/kacamata2_1.jpg
+    - images/kacamata2_2.jpg
+    - images/kacamata2_3.jpg
+    - images/kacamata2_4.jpg
+    - images/kacamata3_1.jpg
+    - images/kacamata3_2.jpg
+    - images/kacamata3_3.jpg
+    - images/kacamata3_4.jpg
+    - images/kacamata4_1.jpg
+    - images/kacamata4_2.jpg
+    - images/kacamata4_3.jpg
+    - images/kacamata4_4.jpg
 
   fonts: 
     - family: PirataOne
@@ -77,6 +93,10 @@ flutter:
     - family: Ahellya
       fonts:
         - asset: fonts/Ahellya.ttf
+
+    - family: Subway
+      fonts:
+      - asset: fonts/Subway_Black.ttf
 
   
 

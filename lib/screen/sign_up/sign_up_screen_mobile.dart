@@ -1,8 +1,7 @@
 import 'package:app_watchink/screen/login/login_screen_mobile.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
-import '../main_screen_mobile.dart';
+import '../home/main_screen_mobile.dart';
 
 class SignUpScreenMobile extends StatefulWidget {
   const SignUpScreenMobile({Key? key}) : super(key: key);

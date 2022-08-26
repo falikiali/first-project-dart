@@ -178,7 +178,6 @@ class FirstScreenMobile extends StatelessWidget {
                           print('Exception: $e');
                           print('Stack trace: $s');
                         }
-                        
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(18.0),
