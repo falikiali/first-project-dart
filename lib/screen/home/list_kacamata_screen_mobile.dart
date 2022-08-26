@@ -47,57 +47,48 @@ class _ListKacamataScreenMobileState extends State<ListKacamataScreenMobile> {
                         ),
                       ),
                       const SizedBox(height: 8.0,),
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: Text(
-                            item.name,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              color: Colors.black
-                            ),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text(
+                          item.name,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            color: Colors.black
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(height: 8.0,),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text(
+                          item.price,
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black
                           ),
                         ),
                       ),
                       const SizedBox(height: 8.0,),
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: Text(
-                            item.price,
-                            style: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Row(
+                          children: [
+                            const Icon(
+                              Icons.star,
+                              size: 15.0,
+                              color: Colors.yellow,
                             ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 8.0,),
-                      Expanded(
-                        flex: 1,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: Row(
-                            children: [
-                              const Icon(
-                                Icons.star,
-                                size: 15.0,
-                                color: Colors.yellow,
+                            Text(
+                              "Rating ${item.rating} | Terjual ${item.terjual}",
+                              style: const TextStyle(
+                                fontSize: 13,
+                                color: Colors.black
                               ),
-                              Text(
-                                "Rating ${item.rating} | Terjual ${item.terjual}",
-                                style: const TextStyle(
-                                  fontSize: 13,
-                                  color: Colors.black
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       )
                     ],
