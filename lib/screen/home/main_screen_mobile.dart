@@ -8,14 +8,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class MainScreenMobile extends StatefulWidget {
+class MainScreenMobile extends StatelessWidget {
   const MainScreenMobile({Key? key}) : super(key: key);
-
-  @override
-  State<MainScreenMobile> createState() => _MainScreenMobileState();
-}
-
-class _MainScreenMobileState extends State<MainScreenMobile> {
 
   @override
   Widget build(BuildContext context) {

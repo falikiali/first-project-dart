@@ -3,14 +3,9 @@ import 'package:flutter/material.dart';
 import '../../utils/data_dummy.dart';
 import 'detail_kacamata_screen_mobile.dart';
 
-class ListKacamataScreenMobile extends StatefulWidget {
+class ListKacamataScreenMobile extends StatelessWidget {
   const ListKacamataScreenMobile({Key? key}) : super(key: key);
 
-  @override
-  State<ListKacamataScreenMobile> createState() => _ListKacamataScreenMobileState();
-}
-
-class _ListKacamataScreenMobileState extends State<ListKacamataScreenMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

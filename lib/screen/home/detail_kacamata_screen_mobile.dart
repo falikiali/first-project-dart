@@ -12,16 +12,30 @@ class DetailKacamataScreenMobile extends StatefulWidget {
 
 class _DetailKacamataScreenMobileState extends State<DetailKacamataScreenMobile> {
   late bool _isAddOnCart;
+  late int count;
 
   @override
   void initState() {
     _isAddOnCart = false;
+    count = 1;
     super.initState();
   }
 
   void btnAddOnCart() {
     setState(() {
       _isAddOnCart = !_isAddOnCart;  
+    });
+  }
+
+  void addCount() {
+    setState(() {
+      count++;
+    });
+  }
+
+  void minCount() {
+    setState(() {
+      count--;
     });
   }
 
@@ -142,29 +156,100 @@ class _DetailKacamataScreenMobileState extends State<DetailKacamataScreenMobile>
             ),
             const SizedBox(height: 16,),
             Container(
-              width: MediaQuery.of(context).size.width,
-              height: 50,
-              margin: EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
-              child: ElevatedButton(
-                onPressed: () {
-                  btnAddOnCart();
-                },
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12.0)
-                  ),
-                ),
-                child: _isAddOnCart ? 
-                  const Icon(Icons.check_outlined) 
-                  : 
-                  const Text(
-                    "+ Keranjang",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Ahellya',
-                      fontSize: 18.0
+              margin: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          if (count != 1) minCount();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.0),
+                            side: const BorderSide(color: Colors.black)
+                          ),
+                        ),
+                        child: const Icon(
+                          Icons.horizontal_rule,
+                          color: Colors.black,
+                          size: 16,
+                        )
+                      ),
                     ),
-                  )
+                  ),
+                  const SizedBox(width: 8,),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 50,
+                      alignment: Alignment.center,
+                      child: Text(
+                        count.toString(),
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 25
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 8,),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          if (count != widget.kacamata.stock) addCount();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.0),
+                            side: const BorderSide(color: Colors.black)
+                          ),
+                        ),
+                        child: const Icon(
+                          Icons.add,
+                          color: Colors.black,
+                          size: 16,
+                        )
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 8,),
+                  Expanded(
+                    flex: 6,
+                    child: Container(
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          btnAddOnCart();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12.0)
+                          ),
+                        ),
+                        child: _isAddOnCart ? 
+                          const Icon(Icons.check_outlined) 
+                          : 
+                          const Text(
+                            "+ Keranjang",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Ahellya',
+                              fontSize: 18.0
+                            ),
+                          )
+                      ),
+                    ),
+                  ),
+                ],
               ),
             )
           ],
